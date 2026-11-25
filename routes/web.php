@@ -22,9 +22,9 @@ Route::get('/register', function () {
 
 Route::post('/student/save', function (Request $req) {
 
-    $name = $req->input('student_name');
+    $name = $req->input('student_name') ?: 'Ismail';
     $email = $req->input('student_email');
-    $age = $req->input('student_age');
+    $age = $req->input('student_age') ?: 18;
 
     return "Student Details <br> Name: $name <br> Email:$email <br> Age: $age";
 
