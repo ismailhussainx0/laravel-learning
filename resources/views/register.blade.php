@@ -7,7 +7,7 @@
 
     <h2>Student Registration</h2>
 
-    <form action="/student/save" method="POST">
+    <form action="/student/register" method="POST">
 
     @csrf
 
