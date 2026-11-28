@@ -14,6 +14,12 @@ class StudentController extends Controller
     // store Data from register form
     public function store(Request $request){
 
+        $request->validate([
+            'student_name' => 'required',
+            'student_email' => 'email|required',
+            'student_age' => 'required|numeric|min:18'
+        ]);
+
         $name = $request->input('student_name');
         $email = $request->input('student_email');
         $age = $request->input('student_age');
