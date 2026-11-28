@@ -38,4 +38,4 @@ Route::get('/about', function(){
 Route::get('/student/register', [StudentController::class, 'showRegisterForm']);
 
 // Store Student Registration data
-Route::post('/student/register', [studentController::class, 'store']);
+Route::post('/student/register', [StudentController::class, 'store']);
